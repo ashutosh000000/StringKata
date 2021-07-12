@@ -1,6 +1,11 @@
 public class Addition {
 
     public int add(String number){
+        int num;
+        if(number.contains("+")){
+            number=number.substring(0, number.indexOf('+'));
+        }
+
         if(number.equals("")) {
             return 0;
         }
@@ -10,7 +15,7 @@ public class Addition {
 
     public static void main(String arg[]){
         Addition addition = new Addition();
-        int sum = addition.add("2");
+        int sum = addition.add("2+");
         System.out.println(sum);
     }
 }

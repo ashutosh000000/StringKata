@@ -26,4 +26,11 @@ public class AdditionTest {
     int sum = addition.add(no);
     Assert.assertEquals(2, sum);
     }
+
+    @Test
+    public void firstNumberWithPlus(){
+        String no = "2+";
+        int sum = addition.add(no);
+        Assert.assertEquals(2, sum);
+    }
 }
