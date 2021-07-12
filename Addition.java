@@ -1,14 +1,16 @@
 public class Addition {
 
-    public int addString(String number){
-        if(number.equals(""));
-        return 0;
+    public int add(String number){
+        if(number.equals("")) {
+            return 0;
+        }
+        return Integer.parseInt(number);
     }
 
 
     public static void main(String arg[]){
-        Addition add = new Addition();
-        int sum = add.addString("");
+        Addition addition = new Addition();
+        int sum = addition.add("2");
         System.out.println(sum);
     }
 }
