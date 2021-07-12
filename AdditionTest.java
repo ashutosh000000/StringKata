@@ -46,5 +46,11 @@ public class AdditionTest {
         Assert.assertEquals(5, sum);
     }
 
+    @Test
+    public void takingUserInput(){
+        String no = "234,567";
+        int sum = addition.add(no);
+        Assert.assertEquals(801, sum);
+    }
 
 }

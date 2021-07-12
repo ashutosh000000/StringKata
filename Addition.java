@@ -1,5 +1,8 @@
+import java.util.Scanner;
+
 public class Addition {
 
+    private static Scanner scan = new Scanner(System.in);
     public int add(String number){
         int num=0;
         if(number.equals("")) {
@@ -28,7 +31,9 @@ public class Addition {
 
     public static void main(String arg[]){
         Addition addition = new Addition();
-        int sum = addition.add("2,3");
+        System.out.println("enter the string :");
+        String userinput = scan.nextLine();
+        int sum = addition.add(userinput);
         System.out.println(sum);
     }
 }
