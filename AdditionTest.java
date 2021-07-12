@@ -15,8 +15,6 @@ public class AdditionTest {
 
     @Test
     public void testFunction(){
-
-//            Addition addition = new Addition();
             String no = "";
             int sum = addition.add(no);
             Assert.assertEquals(0, sum);
@@ -51,6 +49,13 @@ public class AdditionTest {
         String no = "234,567";
         int sum = addition.add(no);
         Assert.assertEquals(801, sum);
+    }
+
+    @Test
+    public void newLineBetweenNumbers(){
+        String no = "1",no2 = "2,3";
+        int sum = addition.add(no,no2);
+        Assert.assertEquals(6, sum);
     }
 
 }
