@@ -58,4 +58,13 @@ public class AdditionTest {
         Assert.assertEquals(6, sum);
     }
 
+    @Test
+    public void differentDelemiter(){
+        String no,no2;
+        no=";";
+        no2 = "1;2";
+        int sum = addition.add(no, no2);
+        Assert.assertEquals(3, sum);
+    }
+
 }

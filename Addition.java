@@ -12,7 +12,7 @@ public class Addition {
 //        if(number.contains("\n")&&number.contains(",")){
 //            num = addingWithNewLine(number);
 //        }else {
-            num = findingComma(number);
+            num = findingComma(number,",");
 //        }
         if(num!=0){
             return num;
@@ -22,15 +22,18 @@ public class Addition {
 
     public int add(String number1, String number2)
     {
-            int num = findingComma(number2);
+        if(number1.equals(";")||number1.equals("-")||number1.equals("+")||number1.equals(":")){
+            return findingComma(number2, number1);
+        }
+            int num = findingComma(number2, ",");
             return (Integer.parseInt(number1)+num);
     }
 
-    public int findingComma(String number){
+    public int findingComma(String number, String delimeter){
         String firstnumber,secondnumber;
-        if(number.contains(",")) {
-            firstnumber = number.substring(0, number.indexOf(','));
-            secondnumber = number.substring(number.indexOf(',') + 1);
+        if(number.contains(delimeter)) {
+            firstnumber = number.substring(0, number.indexOf(delimeter));
+            secondnumber = number.substring(number.indexOf(delimeter) + 1);
             if (secondnumber.equals("")) {
                 return Integer.parseInt(firstnumber);
             } else {
