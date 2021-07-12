@@ -5,11 +5,13 @@ import org.junit.Assert;
 public class AdditionTest {
     private Addition addition;
 
+
     @Before
     public void setup()
     {
     addition = new Addition();
     }
+
 
     @Test
     public void testFunction(){
@@ -19,6 +21,7 @@ public class AdditionTest {
             int sum = addition.add(no);
             Assert.assertEquals(0, sum);
     }
+
     @Test
     public void passingNumber(){
 //        Addition addition;
@@ -27,10 +30,21 @@ public class AdditionTest {
     Assert.assertEquals(2, sum);
     }
 
+
     @Test
     public void firstNumberWithPlus(){
-        String no = "2+";
+        String no = "2,";
         int sum = addition.add(no);
         Assert.assertEquals(2, sum);
     }
+
+
+    @Test
+    public void twoNumberAddition(){
+        String no = "2,3";
+        int sum = addition.add(no);
+        Assert.assertEquals(5, sum);
+    }
+
+
 }
