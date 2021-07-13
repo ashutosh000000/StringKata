@@ -74,4 +74,19 @@ public class AdditionTest {
 //        no2="";
 //    }
 
+    @Test
+    public void negtiveValue(){
+        String no="-44,66";
+        int sum = addition.add(no);
+        Assert.assertEquals(0,sum);
+    }
+    @Test
+    public void negativeValues(){
+        String no,no2;
+        no="//;";
+        no2="-44;-66";
+        int sum = addition.add(no, no2);
+        Assert.assertEquals(0,sum);
+    }
+
 }
