@@ -40,6 +40,14 @@ public class Addition{
         if(number.contains(delimeter)) {
             firstnumber = number.substring(0, number.indexOf(delimeter));
             secondnumber = number.substring(number.indexOf(delimeter) + 1);
+            if(Integer.parseInt(firstnumber)>1000||Integer.parseInt(secondnumber)>1000){
+                if(Integer.parseInt(firstnumber)>1000){
+                    firstnumber="0";
+                }
+                if(Integer.parseInt(secondnumber)>1000){
+                    secondnumber="0";
+                }
+            }
             if (secondnumber.equals("")) {
                 if(Integer.parseInt(firstnumber)<0){
                     throw new NegativesNotAllowed("negatives not allowed "+firstnumber);

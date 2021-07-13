@@ -89,4 +89,21 @@ public class AdditionTest {
         Assert.assertEquals(0,sum);
     }
 
+    @Test
+    public void greaterValue(){
+        String no;
+        no="2,1001";
+        int sum=addition.add(no);
+        Assert.assertEquals(2,sum);
+    }
+
+    @Test
+    public void greaterValues(){
+        String no,no2;
+        no="//;";
+        no2="2;1001";
+        int sum=addition.add(no,no2);
+        Assert.assertEquals(2,sum);
+    }
+
 }
