@@ -22,6 +22,8 @@ public class Addition {
 
     public int add(String number1, String number2)
     {
+        number1=number1.replaceAll("/","");
+
         if(number1.equals(";")||number1.equals("-")||number1.equals("+")||number1.equals(":")){
             return findingComma(number2, number1);
         }
